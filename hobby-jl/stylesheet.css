@@ -1,0 +1,68 @@
+/* Name:  John Laschober
+Course Name: Web and Distributed Programming
+Project Number: 1
+Semester: Fall 2018 */
+
+body {
+    background: url("assets/background.png");
+}
+
+p {
+    text-indent: 10px;
+}
+
+h1, h2, h3, p, ul, table{
+    padding: 5px;
+    background-color: rgba(255, 255,255, 0.8);
+    border-radius: 5px;
+}
+
+:not(li) > a {
+    background-color: rgba(255, 255,255, 0.8);
+    padding: 1px;
+    margin: 2px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+img {
+    border-radius: 8px;
+}
+
+.blurred {
+    filter: blur(4px);
+    transition: filter 1s;
+}
+
+.blurred:hover {
+    filter: blur(0px);
+}
+
+h1 {
+    display: inline-block;
+    animation: funRotateFrames 5s infinite linear;
+}
+
+@keyframes funRotateFrames {
+    25% {
+      transform: rotate(1deg);  
+    }
+    75% {
+      transform: rotate(-1deg);
+    }
+}
+
+table, td {
+    border: 1px dotted black;
+}
+th {
+    border: 1px solid black;
+}
+
+ul {
+    list-style: none;
+}

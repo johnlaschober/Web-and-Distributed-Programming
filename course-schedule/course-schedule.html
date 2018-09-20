@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author: John Laschober
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>Course Schedule - John Laschober</title>
+    <link rel="stylesheet" type="text/css" href="course-schedule.css">
+    <script src="course-schedule.js"></script>
+</head>
+<body>
+    <h3>Quicklinks</h3>
+    <ul>
+        <li><a href="#bio">Biography</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+    </ul>
+    <hr>
+    <h1 id="bio">Biography</h1>
+    <img id="johnPic" src="assets/headshot.png" alt="Picture of me"><br>
+    Here is a short biography about myself:<br>
+    <blockquote>
+        Hi, my name is John Laschober and I am currently a 
+        senior here at Lewis University who is on track to
+        graduate Spring 2019. I will be graduating with a 
+        B.S. in Computer Science (with a concentration in
+        pervasive computing), a B.A. in Mathematics, a minor
+        in Spanish, and a minor in Web programming. In my
+        free time, I enjoy trying to make video games as much
+        as I love playing them. I also like to play guitar
+        and watch movies whenever I have the time.
+    </blockquote>
+    <hr>
+    <h1 id="courses">Courses</h1>
+    <ul>
+        <li>FA18-CPSC-24700-001: Web and Distributed Prog</li>
+        <li>FA18-CPSC-49200-001: Software Systms Capstone Prjct</li>
+        <li>FA18-MATH-36000-001: Real Analysis 1</li>
+        <li>FA18-MATH-42500-001: Mathematical Modeling</li>
+        <li>FA18-MATH-44000-001: Abstract Algebra 1</li>
+    </ul>
+    <hr>
+    <h1 id="schedule">Course Schedule - John Laschober</h1>
+    <table>
+        <tr>
+            <th></th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <td>8am</td>
+            <td>Abstract Algebra 1<br>(FA18-MATH-44000-001)</td>
+            <td></td>
+            <td>Abstract Algebra 1<br>(FA18-MATH-44000-001)</td>
+            <td></td>
+            <td>Abstract Algebra 1<br>(FA18-MATH-44000-001)</td>
+        </tr>
+        <tr>
+            <td>9am</td>
+            <td>Work</td>
+            <td></td>
+            <td>Work</td>
+            <td></td>
+            <td>Work</td>
+        </tr>
+        <tr>
+            <td>10am</td>
+            <td>Work</td>
+            <td></td>
+            <td>Work</td>
+            <td></td>
+            <td>Work</td>
+        </tr>
+        <tr>
+            <td>11am</td>
+            <td>Mathematical Modelling<br>(FA18-MATH-42500-001)</td>
+            <td>Real Analysis 1<br>(FA18-MATH-36000-001)</td>
+            <td>Mathematical Modelling<br>(FA18-MATH-42500-001)</td>
+            <td>Real Analysis 1<br>(FA18-MATH-36000-001)</td>
+            <td>Mathematical Modelling<br>(FA18-MATH-42500-001)</td>
+        </tr>
+        <tr>
+            <td>12pm</td>
+            <td>Work</td>
+            <td></td>
+            <td>Work</td>
+            <td></td>
+            <td>Work</td>
+        </tr>
+        <tr>
+            <td>1pm</td>
+            <td>Work</td>
+            <td></td>
+            <td>Work</td>
+            <td></td>
+            <td>Work</td>
+        </tr>
+        <tr>
+            <td>2pm</td>
+            <td>Work</td>
+            <td></td>
+            <td>Work</td>
+            <td></td>
+            <td>Work</td>
+        </tr>
+        <tr>
+            <td>3pm</td>
+            <td>Web and Distributed Programming<br>(FA18-CPSC-24700-001)</td>
+            <td></td>
+            <td>Web and Distributed Programming<br>(FA18-CPSC-24700-001)</td>
+            <td></td>
+            <td>Web and Distributed Programming<br>(FA18-CPSC-24700-001)</td>
+        </tr>
+        <tr>
+            <td>4pm</td>
+            <td></td>
+            <td></td>
+            <td>Software Systems Capstone Project<br>(FA18-CPSC-49200-001)</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        
+    </table>
+    <hr>
+    <h3>Feedback Form</h3>
+    <form onsubmit="infoSubmit()">
+        <label for="enteredName">Name</label>
+        <input type="text" id="enteredName"><br>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female"><br>
+        <label for="feedback">Feedback</label><br>
+        <textarea rows="4" cols="50" id="feedback"></textarea><br>
+        <button type="submit" value="Submit">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+
+    </form>
+</body>
+</html>
