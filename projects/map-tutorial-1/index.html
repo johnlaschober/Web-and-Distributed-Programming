@@ -27,7 +27,13 @@
           center: {lat: -34.397, lng: 150.644},
           zoom: 8
         });
+
+        map.addListener('bounds_changed', function() {
+          console.log("Map bounds changed!");
+        });
       }
+
+      
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBK8aG4yy-xQqla-wS_nw22sG4_mYOeGxg&callback=initMap"
     async defer></script>
