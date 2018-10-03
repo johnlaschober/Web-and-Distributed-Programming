@@ -2,8 +2,8 @@ var map;
 
 function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 20, lng: -80},
-            zoom: 8
+            center: {lat: 0, lng: 0},
+            zoom: 2
             // mapTypeId: 'satellite'
     });
 
@@ -41,4 +41,6 @@ function initMap() {
         document.getElementById("inBoundStatus").innerHTML = "myLatLng object is NOT in the current bounds.";
         }
     });
+
+    // Go back and stick all game functionality in an UpdateGame()
 }

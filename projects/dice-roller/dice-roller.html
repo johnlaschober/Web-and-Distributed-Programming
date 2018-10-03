@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author: John Laschober
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="dice-roller.js"></script>
+    <link rel="stylesheet" href="dice-roller.css">
+</head>
+<body onload="initApp()">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="bigIsaacHeader">The Binding of Isaac - Four Souls Dice Roller</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 col-xs-12">
+                <!-- Could be cool to use a card here -->
+
+                <h2 class="isaacHeader">Information</h2><br>
+                This page is an online dice roller for the upcoming tabletop game The Binding of Isaac: Four Souls
+                which has just recently completed a successful Kickstarter campaign. The game uses two different
+                dice, with one being a six-sided die while the other is an 8-sided die.<br>
+                <h2 class="isaacHeader">Instructions</h2><br>
+                <ul>
+                    <li>Press "Roll Die" underneath the designated die to simulate a roll</li>
+                    <li>Press Enter on your keyboard to roll the six-sided die</li>
+                    <li>Reload the page to refresh your dice rolls</li>
+                </ul>
+
+            </div>
+            <div class="col-md-3 col-xs-12 text-center">
+                Six-Sided Die: <input class="right-justified" id="die6" type="text" value="" size="5" disabled><br>
+                <img class="img-fluid" id="die6Image" src="assets/die.png"><br>
+                <button autofocus type="button" onclick="RollSixSidedDie()">Roll Die</button><br><br>
+               
+                Eight-Sided Die: <input class="right-justified" id="die8" type="text" value="" size="5" disabled><br>
+                <button type="button" onclick="RollEightSidedDie()">Roll Die</button><br><br>
+            </div>
+            <div class="col-md-6 col-xs-12">
+            <!-- Image -->
+            <img class="img-fluid" src="assets/promoArt.png">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

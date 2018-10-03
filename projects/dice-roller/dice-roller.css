@@ -1,0 +1,27 @@
+.isaacHeader, .bigIsaacHeader {
+    color: #fff;
+    font-family: isaac;
+}
+
+.bigIsaacHeader {
+    font-size: 60px;
+}
+
+@font-face {
+    font-family: isaac;
+    src: url("assets/upheavtt.ttf")
+}
+
+body {
+    background-image: url(assets/boards.jpg);
+    background-repeat: repeat;
+}
+
+.right-justified {
+    text-align: right;
+}
+
+@keyframes jump {
+    0% { transform: translate(0px, 10px); }
+    50% { transform: translate(0px, -10px); }
+}
