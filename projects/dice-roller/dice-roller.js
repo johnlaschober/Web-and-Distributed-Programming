@@ -1,12 +1,12 @@
 function RollSixSidedDie() {
-    var randomValue = Math.floor(Math.random()*6)+1;
+    var randomValue = Math.floor(Math.random()*6)+1; // Get random value
     document.getElementById("die6").value = randomValue;
     document.getElementById("die6ImageText").innerHTML = randomValue;
 
     var dieImage = document.getElementById("die6Image");
-    dieImage.style.animation = 'jump 0.5s linear';
+    dieImage.style.animation = 'jump 0.5s linear'; // Applies an animation
     setTimeout(function() {
-        dieImage.style.animation = 'none';
+        dieImage.style.animation = 'none'; // Removes animation (otherwise, cannot re-play animation)
     }, 500);
 }
 
@@ -22,7 +22,7 @@ function RollEightSidedDie() {
     }, 500);
 }
 
-function initApp() {
+function initApp() { // Roll dice on page load
     RollSixSidedDie();
     RollEightSidedDie();
 }

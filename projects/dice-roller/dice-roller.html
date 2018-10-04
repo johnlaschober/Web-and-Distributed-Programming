@@ -1,11 +1,15 @@
 <!doctype html>
 <html lang="en">
 <!--
-    Author: John Laschober
+    Name:  John Laschober
+    Course Name: Web and Distributed Programming
+    Project Number: 3
+    Semester: Fall 2018
 -->
 <head>
     <meta charset="UTF-8">
-    <title>Dice Roller</title>
+    <title>Four Souls Dice Roller</title>
+    <!-- Using Bootstrap 4 for fun -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="dice-roller.js"></script>
     <link rel="stylesheet" href="dice-roller.css">
@@ -19,11 +23,12 @@
         </div>
 
         <div class="row">
+            <!-- Varying styles for different window sizes -->
             <div class="col-lg-3 col-md-5 col-xs-12 columnStyle">
                 <h2 class="isaacHeader">Information</h2>
                 <div class="mainText">This page is an online dice roller for the upcoming tabletop game The Binding of Isaac: Four Souls
-                which has just recently completed a successful Kickstarter campaign. The game uses two different
-                dice, with one being a six-sided die while the other is an 8-sided die.</div><br>
+                which has just recently completed a successful <a href="https://www.kickstarter.com/projects/isaacfoursouls/the-binding-of-isaac-four-souls">Kickstarter campaign.</a>
+                The game uses two different dice, with one being a six-sided die while the other is an 8-sided die.</div><br>
                 <h2 class="isaacHeader">Instructions</h2>
                 <ul>
                     <li>Press "Roll Die" underneath the designated die to simulate a roll</li>
@@ -35,20 +40,21 @@
             <div class="col-lg-3 col-md-6 col-xs-12 text-center columnStyle">
                 <div class="mainText">Six-Sided Die: <input class="right-justified" id="die6" type="text" value="" size="5" disabled></div>
                 <div class="dieContainer">
-                    <img class="img-fluid" id="die6Image" src="assets/6die.png"><br>
+                    <img class="img-fluid" id="die6Image" alt="6-sided die image" src="assets/6die.png"><br>
                     <div class="centered" id="die6ImageText"></div>
                 </div>
+                <!-- Roll Six-sided Die has autofocus -->
                 <button autofocus type="button" onclick="RollSixSidedDie()">Roll Die</button><br><br>
                
                 <div class="mainText">Eight-Sided Die: <input class="right-justified" id="die8" type="text" value="" size="5" disabled></div>
                 <div class="dieContainer">
-                    <img class="img-fluid" id="die8Image" src="assets/8die.png"><br>
+                    <img class="img-fluid" id="die8Image" alt="8-sided die image" src="assets/8die.png"><br>
                     <div class="centered" id="die8ImageText"></div>
                 </div>
                 <button type="button" onclick="RollEightSidedDie()">Roll Die</button><br><br>
             </div>
             <div class="col-lg-5 col-md-12 col-xs-12">
-            <img class="img-fluid" src="assets/promoArt.png">
+            <img class="img-fluid" alt="Four Souls promotional art" src="assets/promoArt.png">
             </div>
         </div>
     </div>
