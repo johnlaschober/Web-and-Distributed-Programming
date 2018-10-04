@@ -1,6 +1,11 @@
 .isaacHeader, .bigIsaacHeader {
     color: #fff;
     font-family: isaac;
+    text-align: center;
+}
+
+.isaacHeader {
+    margin-bottom: 0px;
 }
 
 .bigIsaacHeader {
@@ -9,7 +14,7 @@
 
 @font-face {
     font-family: isaac;
-    src: url("assets/upheavtt.ttf")
+    src: url("assets/upheavtt.ttf");
 }
 
 body {
@@ -24,4 +29,40 @@ body {
 @keyframes jump {
     0% { transform: translate(0px, 10px); }
     50% { transform: translate(0px, -10px); }
+}
+
+.dieContainer {
+    position: relative;
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#die6Image, #die8Image {
+    width: 150px;
+}
+
+#die6ImageText {
+    font-size: 5vw;
+}
+
+#die8ImageText {
+    font-size: 4vw;
+    transform: translate(-50%, -60%);
+}
+
+.columnStyle {
+    background-color: rgba(168, 123, 97, 0.74);
+    border-radius: 20px;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.mainText, li {
+    color: black;
 }
