@@ -38,6 +38,9 @@ html, body {
     height: 250px;
     width: 200%;
     animation: slide 5s linear infinite;
+    bottom: 0;
+    position: fixed;
+    z-index: -1;
 }
 
 body {
