@@ -1,21 +1,66 @@
 <!doctype html>
 <html lang="en">
 <!--
-    Author: John Laschober
+    Name:  John Laschober
+    Course Name: Web and Distributed Programming
+    Semester: Fall 2018
 -->
 <head>
     <meta charset="UTF-8">
     <title>Launch Page - John Laschober</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script src="dice-roller.js"></script>
 </head>
 <body>
-    <h3>John's Sites</h3>
-    <ul>
-        <li><a href="projects/course-schedule/course-schedule.html">Course Schedule</a></li>
-        <li><a href="projects/hobby-jl/my-favorite-hobby.html">My Favorite Hobby</a></li>
-        <li><a href="projects/hello-world-plus/hello-world-jl.html">Hello World Plus</a></li>
-        <li><a href="projects/map-tutorial-1/index.html">Map Tutorial 1</a></li>
-        <li><a href="projects/map-mania-1/map-mania.html">Map Mania v1</a></li>
-    </ul>
-    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 id="title">John's Sites</h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-3 col-md-4 col-xs-12">
+                <div class="siteContainer">
+                        <a href="projects/course-schedule/course-schedule.html"><img class="thumbnail img-fluid" src="indexAssets/courseSchedulePic.PNG" alt="course schedule picture"></a>
+                    <div>Course Schedule</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-12">
+                <div class="siteContainer">
+                        <a href="projects/hobby-jl/my-favorite-hobby.html"><img class="thumbnail img-fluid" src="indexAssets/favoriteHobbyPic.PNG" alt="my favorite hobby picture"></a>
+                    <div>My Favorite Hobby</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-12">
+                <div class="siteContainer">
+                        <a href="projects/hello-world-plus/hello-world-jl.html"><img class="thumbnail img-fluid" src="indexAssets/helloWorldPic.PNG" alt="hello world plus picture"></a>
+                    <div>Hello World Plus</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-12">
+                <div class="siteContainer">
+                        <a href="projects/map-tutorial-1/index.html"><img class="thumbnail img-fluid" src="indexAssets/mapTutorialPic.PNG" alt="map tutorial 1 picture"></a>
+                    <div>Map Tutorial 1</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-12">
+                <div class="siteContainer">
+                        <a href="projects/dice-roller/dice-roller.html"><img class="thumbnail img-fluid" src="indexAssets/diceRollerPic.PNG" alt="dice roller picture"></a>
+                    <div>Dice Roller</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-12">
+                <div class="siteContainer">
+                        <a href="projects/map-mania-1/map-mania.html"><img class="thumbnail img-fluid" src="indexAssets/mapMania1Pic.PNG" alt="map mania v1 picture"></a>
+                    <div>Map Mania v1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slidingBackground"></div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

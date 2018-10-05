@@ -1,14 +1,13 @@
-#map 
-{
+#map {
     height: 90%;
 }
-html, body 
-{
+
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
-.padded 
-{
+
+.padded {
     padding: 5px;
 }

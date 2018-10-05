@@ -1,0 +1,47 @@
+.thumbnail {
+    border-radius: 10px;
+}
+
+.siteContainer {
+    padding-bottom: 20px;
+    background-color: #F78CFF;
+    border-radius: 10px;
+    margin: 5px;
+    border: 2px solid black;
+    padding-bottom: 5px;
+}
+
+#title {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    background-color: #F78CFF;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(-250px, 0, 0);
+    }
+}
+
+.slidingBackground {
+    background: url("indexAssets/palm.png") repeat;
+    height: 250px;
+    width: 200%;
+    animation: slide 5s linear infinite;
+}
+
+body {
+    background: url("indexAssets/vaporBackground.jpg") repeat-x;
+    background-size: cover;
+    background-color: black;
+}
