@@ -1,0 +1,81 @@
+[{
+		"content": "Louvre Museum",
+		"coordinates": {
+			"lat": 48.860611,
+			"lng": 2.337644
+		},
+		"iconImagePath": "flag.png"
+	},
+	{
+		"content": "Badlands National Park",
+		"coordinates": {
+			"lat": 43.907810,
+			"lng": -102.332787
+		},
+		"iconImagePath": "flag.png"
+	},
+	{
+		"content": "Pike Place Market",
+		"coordinates": {
+			"lat": 47.609630,
+			"lng": -122.342150
+		},
+		"iconImagePath": "flag.png"
+	},
+	{
+		"content": "Guggenheim Museum Bilbao",
+		"coordinates": {
+			"lat": 43.268428,
+			"lng": -2.934061
+		},
+		"iconImagePath": "flag.png"
+	},
+	{
+		"content": "Buckingham Palace",
+		"coordinates": {
+			"lat": 51.501366,
+			"lng": -0.141890
+		},
+		"iconImagePath": "flag.png"
+	},
+	{
+		"content": "New York City",
+		"coordinates": {
+			"lat": 40.712776,
+			"lng": -74.005974
+		},
+		"iconImagePath": "flag.png"
+	},
+	{
+		"content": "Niagara Falls",
+		"coordinates": {
+			"lat": 43.082817,
+			"lng": -79.074165
+		},
+		"iconImagePath": "flag.png"
+	},
+	{
+		"content": "Universal Studios Florida",
+		"coordinates": {
+			"lat": 28.433180,
+			"lng": -81.455570
+		},
+		"iconImagePath": "flag.png"
+	},
+	{
+		"content": "Plaza de España",
+		"coordinates": {
+			"lat": 42.607540,
+			"lng": -7.769260
+		},
+		"iconImagePath": "flag.png"
+	},
+	{
+		"content": "Channahon Community Park",
+		"coordinates": {
+			"lat": 41.474930,
+			"lng": -88.168550
+		},
+		"iconImagePath": "flag.png"
+	}
+]

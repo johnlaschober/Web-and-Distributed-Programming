@@ -7,20 +7,22 @@
 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Map Mania v2</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <script src="map-mania.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="map-mania.css"> 
   </head>
   <body onload="initApp()">
     <div id="map"></div>
-    <div id="score" onclick="finishGame()">Score: 0/?</div>
-    <div id="timer">Time: 0</div>
+    <div id="score" onclick="finishGame()" class="noSelect">Score: 0/?</div>
+    <div id="timer" class="noSelect">Time: 0</div>
+    <a id = "instructions" onclick="showInstructions()" href="#" class="noSelect text-center">Instructions</a>
+
     <div id="tempContainer">
         <img src="thermometer.png" id="thermometerImage" alt="thermometer">
         <div id="temperature"></div>
@@ -29,14 +31,16 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBK8aG4yy-xQqla-wS_nw22sG4_mYOeGxg&callback=initMap"
     async defer></script>
 
-    <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModalTitle" aria-hidden="true">
+    <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="col-12 modal-title text-center" id="welcomeModalLongTitle">Welcome! - Map Mania V2</h5>
+            <h5 class="col-12 modal-title text-center" id="welcomeModalLongTitle">Instructions - Map Mania V2</h5>
           </div>
           <div class="modal-body">
-            BOTTOM TEXT
+            The goal of this game is to find all of the hidden locations in the fastest amount of time! The thermometer on the left will go up as you get closer to
+            the target location. Don't forget to zoom in on the location to earn points and reveal the location's name!<br><br>
+            If you would like to see all places immediately, simply click on the <strong>Score</strong> in the upper right.
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="startTimer()">Play</button>
@@ -45,23 +49,39 @@
       </div>
     </div>
 
-    <div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="resultsModalTitle" aria-hidden="true">
+    <div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="col-12 modal-title text-center" id="instructionsModalLongTitle">Instructions - Map Mania V2</h5>
+            </div>
+            <div class="modal-body">
+              The goal of this game is to find all of the hidden locations in the fastest amount of time! The thermometer on the left will go up as you get closer to
+              the target location. Don't forget to zoom in on the location to earn points and reveal the location's name!<br><br>
+              If you would like to see all places immediately, simply click on the <strong>Score</strong> in the upper right.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="modal fade" id="resultsModal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="col-12 modal-title text-center" id="resultsModalLongTitle">Results</h5>
           </div>
-          <div class="modal-body" id="resultsModalInner">
-            BOTTOM TEXT
-          </div>
+          <div class="modal-body" id="resultsModalInner"></div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal"">OK</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
           </div>
         </div>
       </div>
     </div>
 
-    <script type="text/javascript">
+    <script>
       $(window).on('load',function(){
           $('#welcomeModal').modal({backdrop: 'static', keyboard: false});
           $('#welcomeModal').modal('show');

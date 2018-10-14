@@ -29,6 +29,17 @@ html, body {
     text-align: right;
 }
 
+#instructions {
+    position: absolute;
+    font-size: 24px;
+    top: 5px;
+    left: 45%;
+}
+
+a, a:hover {
+    color: black;
+}
+
 #tempContainer {
     height: 90%;
     position: absolute;
@@ -56,6 +67,13 @@ html, body {
     z-index: 3;
     top: 10%;
     left: 27%;
-
-
 }
+
+.noSelect {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+  }

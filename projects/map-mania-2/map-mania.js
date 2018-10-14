@@ -20,6 +20,7 @@ var gameFinished = false;
 function initApp() {
     // console.log("Starting app");
     document.getElementById("score").innerHTML = "Score: " + "0" + "/" + (favoritePlaces.length.toString());
+    document.getElementById("thermometerImage").draggable = false;
 }
 
 function initMap() {
@@ -133,6 +134,7 @@ function finishGame() {
     gameFinished = true;
     document.getElementById("temperature").style.height = "0%";
     document.getElementById("thermometerImage").style.height = "0%";
+    document.getElementById("instructions").innerHTML = "";
 }
 
 function revealAll() {
@@ -140,4 +142,8 @@ function revealAll() {
         addMarker(currentPlace);
         nextPlace();
     }
+}
+
+function showInstructions() {
+    $('#instructionsModal').modal('show');
 }
