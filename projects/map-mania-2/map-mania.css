@@ -17,6 +17,7 @@ html, body {
     font-size: 25px;
     width: 18%;
     text-align: right;
+    white-space: nowrap;
 }
 
 #score {
@@ -27,6 +28,7 @@ html, body {
     left: 80%;
     width: 18%;
     text-align: right;
+    white-space: nowrap;
 }
 
 #instructions {
