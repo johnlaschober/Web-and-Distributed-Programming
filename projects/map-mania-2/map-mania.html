@@ -1,0 +1,75 @@
+<!--
+  Author:  John Laschober
+  Class:   Web & Distributed Programming 
+  Project: Map Mania v2
+  Session: su18-cpsc-24700-lt1
+  Description: This is the second version of Map Mania that I am creating for Programming Assignment 4. 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map Mania v2</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="map-mania.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="map-mania.css"> 
+  </head>
+  <body onload="initApp()">
+    <div id="map"></div>
+    <div id="score" onclick="finishGame()">Score: 0/?</div>
+    <div id="timer">Time: 0</div>
+    <div id="tempContainer">
+        <img src="thermometer.png" id="thermometerImage" alt="thermometer">
+        <div id="temperature"></div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBK8aG4yy-xQqla-wS_nw22sG4_mYOeGxg&callback=initMap"
+    async defer></script>
+
+    <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="col-12 modal-title text-center" id="welcomeModalLongTitle">Welcome! - Map Mania V2</h5>
+          </div>
+          <div class="modal-body">
+            BOTTOM TEXT
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="startTimer()">Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="resultsModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="col-12 modal-title text-center" id="resultsModalLongTitle">Results</h5>
+          </div>
+          <div class="modal-body" id="resultsModalInner">
+            BOTTOM TEXT
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(window).on('load',function(){
+          $('#welcomeModal').modal({backdrop: 'static', keyboard: false});
+          $('#welcomeModal').modal('show');
+      });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
