@@ -33,14 +33,18 @@ function initMap() {
 
     gMap.addListener('idle', function() {
         // console.log(getLatLngDifference(gMap.getCenter(), favoritePlaces[currentPlaceIndex]));
-        getLatLngDifference(gMap.getCenter(), favoritePlaces[currentPlaceIndex]);
 
         if (gMap.getBounds().contains(currentLatLng) && gMap.getZoom() >= 8 && !gameFinished)
         {
             // console.log(currentPlace.content + " is in");
             addMarker(currentPlace);
+            resetMapZoom();
             nextPlace();
         }
+    });
+
+    gMap.addListener('bounds_changed', function(){
+        getLatLngDifference(gMap.getCenter(), favoritePlaces[currentPlaceIndex]);
     });
 }
 
@@ -78,6 +82,11 @@ function nextPlace() {
     }
 }
 
+function resetMapZoom() {
+    gMap.setZoom(2);
+    gMap.setCenter({lat: 0, lng: 0});
+}
+
 function addMarker(markerContent) {
     var marker = new google.maps.Marker({position:markerContent.coordinates, map:gMap});
     if (markerContent.iconImagePath) {
@@ -94,6 +103,7 @@ function addMarker(markerContent) {
 
     if (markerContent.content) {
         var infoWindow = new google.maps.InfoWindow({"content":markerContent.content});
+        infoWindow.open(gMap, marker);
         marker.addListener("click", function() { infoWindow.open(gMap, marker) });
     }
 
