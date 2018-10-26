@@ -1,0 +1,14 @@
+{
+    "firstName": "John",
+    "lastName": "Laschober",
+    "preferredName": "John",
+    "email": "johnalaschober@lewisu.edu",
+    "phoneNumber": "",
+    "city": "Joliet",
+    "state": "IL",
+    "zip": "60403",
+    "lat": "41.525032",
+    "lng": "-88.081726",
+    "favoriteHobby": "Playing guitar",
+    "favoriteVideoGame": "Project M"
+}
