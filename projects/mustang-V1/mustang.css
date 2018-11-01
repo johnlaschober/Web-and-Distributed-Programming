@@ -1,0 +1,35 @@
+.card, .modal-body, .modal-title {
+    text-align: center;
+    color: white;
+}
+
+.close {
+    color: white !important;
+    opacity: 1 !important;
+}
+
+.modal-header {
+    background-color: darkblue;
+}
+
+.card-body, .modal-body {
+    background-color: blue;
+}
+
+body {
+    background-color: black !important;
+}
+
+.button-holder {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.modal-dialog {
+    border: 1px solid white;
+}
+
+.btn, .btn-primary {
+    background-color: blue !important;
+    color: white !important;
+}

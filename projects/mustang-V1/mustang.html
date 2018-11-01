@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author:  John Laschober
+    Class:   Web & Distributed Programming 
+    Project: Mustang v1
+-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Mustang v1</title>
+        <link rel="stylesheet" href="mustang.css">
+        <script src="mustang.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body onload="initApplication()">  
+        <div class="container">
+            <div class="button-holder">
+                    <button class="btn btn-primary" onclick="loadContacts()" id="loadButton">Load Contacts</button>
+            </div>
+                
+            <div class="row" id="insertingRow">
+
+            </div>
+        </div>
+
+        <div class="modal fade" id="the-one-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="col-1"></div>
+                    <h5 class="col-10 modal-title text-center" id="info-modal-header"></h5>
+                    <button type="button" class="close col-1" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div id="info-first-name"></div><br>
+                    <div id="info-last-name"></div><br>
+                    <div id="info-preferred-name"></div><br>
+                    <div id="info-email"></div><br>
+                    <div id="info-phone-number"></div><br>
+                    <div id="info-city"></div><br>
+                    <div id="info-state"></div><br>
+                    <div id="info-zip"></div><br>
+                    <div id="info-lat"></div><br>
+                    <div id="info-lng"></div><br>
+                    <div id="info-favote-hobby"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
