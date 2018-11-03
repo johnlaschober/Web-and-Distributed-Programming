@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Sophie",
+    "species" : "dog",
+    "foods": {
+      "likes": ["playing", "walks"],
+      "dislikes": ["sneezes"]
+    }
+  },
+  {
+    "name": "Yogi",
+    "species" : "bear",
+    "foods": {
+      "likes": ["picnic baskets"],
+      "dislikes": ["forest rangers"]
+    }
+  },
+  {
+    "name": "Toddles",
+    "species" : "dog",
+    "foods": {
+      "likes": ["pets", "walks"],
+      "dislikes": ["strangers"]
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Roger",
+    "species" : "rabbit",
+    "foods": {
+      "likes": ["adventure"],
+      "dislikes": ["murders"]
+    }
+  },
+  {
+    "name": "Kitty",
+    "species" : "cat",
+    "foods": {
+      "likes": ["yarn", "toys"],
+      "dislikes": ["loud noises"]
+    }
+  },
+  {
+    "name": "Squawk",
+    "species" : "parrot",
+    "foods": {
+      "likes": ["rice"],
+      "dislikes": ["cages"]
+    }
+  }
+]

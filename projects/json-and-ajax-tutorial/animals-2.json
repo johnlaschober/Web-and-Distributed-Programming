@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Echo",
+    "species" : "dolphin",
+    "foods": {
+      "likes": ["swimming"],
+      "dislikes": ["aliens", "monsters"]
+    }
+  },
+  {
+    "name": "Spike",
+    "species" : "hedgehog",
+    "foods": {
+      "likes": ["treats", "carrots"],
+      "dislikes": ["avocados"]
+    }
+  },
+  {
+    "name": "Banjo",
+    "species" : "elephant",
+    "foods": {
+      "likes": ["painting"],
+      "dislikes": ["hunters"]
+    }
+  }
+]
