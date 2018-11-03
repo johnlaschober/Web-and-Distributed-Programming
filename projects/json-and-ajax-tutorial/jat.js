@@ -29,7 +29,7 @@ function renderHTML(data) {
   var animalContainer = document.getElementById("animal-info");
 
   for (i = 0; i < data.length; i++) {
-    htmlString += "<p>" + data[i].name + " is a " + data[i].species + " that likes to eat ";
+    htmlString += "<p>" + data[i].name + " is a " + data[i].species + " that likes ";
     
     for (ii = 0; ii < data[i].foods.likes.length; ii++) {
       if (ii == 0) {
