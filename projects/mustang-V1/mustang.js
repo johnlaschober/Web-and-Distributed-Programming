@@ -30,6 +30,8 @@ function loadContacts() {
     console.log(contactURLArray.length);
     contactArray.length = 0;
 
+    document.getElementById("status").innerHTML = "<";
+
     if (contactURLArray.length > loadingContact) {
         loadContactAt(loadingContact);
     }
@@ -37,17 +39,29 @@ function loadContacts() {
 
 function loadContactAt(i)
 {
-    console.log("Loading: " + i);
+    if (loadingContact == (contactURLArray.length-1))
+    {
+        var html = "";
+        for (i = 0; i < (contactURLArray.length/2) - 8; i++)
+        {
+            html += "| ";
+        }
+        document.getElementById("status").innerHTML = "<" + html + "LOADING COMPLETE " + html + ">";
+    }
+    else
+    {
+        document.getElementById("status").innerHTML += "| ";
+    }
     contactRequest = new XMLHttpRequest();
     contactRequest.open('GET', contactURLArray[i]);
     console.log(contactRequest);
 
     contactRequest.onload = function() {
-        console.log(contactRequest.responseText);
         var contact;
         contact = JSON.parse(contactRequest.responseText);
         contactArray.push(contact);
         console.log("Contact: " + contact.firstName);
+        console.log(contactRequest.responseText);
         var html = [
         '<div class="col-md-3 col-sm-6">',
             '<div class="card h-100" data-toggle="modal" data-target="#the-one-modal" onclick="loadCard('+loadingContact+')">',
@@ -71,6 +85,7 @@ function loadContactAt(i)
     // Useful for skipping JSON files that return CORS errors
     contactRequest.onerror = function() {
         contactArray.push(null);
+        console.log("skipped one");
         loadingContact++;
         if (contactURLArray.length > loadingContact) {
             loadContactAt(loadingContact);
@@ -93,5 +108,4 @@ function loadCard(number)
     document.getElementById("info-zip").innerHTML = "Zip: " + contactArray[number].zip;
     document.getElementById("info-lat").innerHTML = "Lat: " + contactArray[number].lat;
     document.getElementById("info-lng").innerHTML = "Lng: " + contactArray[number].lng;
-    document.getElementById("info-favorite-hobby").innerHTML = "Favorite Hobby: " + contactArray[number].favoriteHobby;
 }
