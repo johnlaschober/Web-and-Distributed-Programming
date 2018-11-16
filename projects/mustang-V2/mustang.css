@@ -1,0 +1,41 @@
+.card, .modal-body, .modal-title {
+    text-align: center;
+    color: white;
+}
+
+.close {
+    color: white !important;
+    opacity: 1 !important;
+}
+
+.modal-header {
+    background-color: rgb(43, 54, 24);
+}
+
+.card-body, .modal-body {
+    background-color: rgb(63, 78, 37);
+}
+
+body {
+    background-color: black !important;
+}
+
+.button-holder {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.modal-dialog {
+    border: 1px solid white;
+}
+
+#loadButton {
+    background-color: rgb(63, 78, 37) !important;
+    color: white !important;
+}
+
+input {
+    color: black;
+    padding-bottom: 2px;
+    width: 101%;
+}
