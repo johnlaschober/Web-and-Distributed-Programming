@@ -228,3 +228,27 @@ function clearCreateTextboxes()
     document.getElementById("new-lat").value = "";
     document.getElementById("new-lng").value = "";
 }
+
+function zipToCityState()
+{
+    var zip = document.getElementById("new-zip").value;
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function() {
+        if (request.readyState == 4 && request.status == 200) {
+            var result = request.responseText;
+            if (result != "")
+            {
+                var place = result.split(', ');
+                if (document.getElementById("new-city").value == "" && document.getElementById("new-state").value == "")
+                {
+                    document.getElementById("new-city").value = place[0];
+                    document.getElementById("new-state").value = place[1];
+                }
+            }
+        }
+    }
+    request.open("GET", "zip-to-city-state.php?zip="+zip);
+    request.send(null);
+}

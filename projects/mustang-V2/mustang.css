@@ -32,6 +32,7 @@ body {
 #loadButton {
     background-color: rgb(63, 78, 37) !important;
     color: white !important;
+    border-color: white !important;
 }
 
 input {
