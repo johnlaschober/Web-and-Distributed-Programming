@@ -252,3 +252,32 @@ function zipToCityState()
     request.open("GET", "zip-to-city-state.php?zip="+zip);
     request.send(null);
 }
+
+$(document).ready(function() {
+    var states = [
+        "AL","AK","AZ",
+        "AR","CA","CO",
+        "CT","DE","FL",
+        "GA","HI","ID",
+        "IL","IN","IA",
+        "KS","KY","LA",
+        "ME","MD","MA",
+        "MI","MN","MS",
+        "MO","MT","NE",
+        "NV","NH","NJ",
+        "NM","NY","NC",
+        "ND","OH","OK",
+        "OR","PA","RI",
+        "SC","SD","TN",
+        "TX","UT","VT",
+        "VA","WA","WV",
+        "WI","WY"
+      ];
+      
+      $("#new-state").autocomplete({
+        source: states
+      });
+      $("#info-state").autocomplete({
+        source: states
+      });
+});
