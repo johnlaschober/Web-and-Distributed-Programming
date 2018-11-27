@@ -19,7 +19,7 @@ function storeJSON() {
                 json: JSON.stringify(tempJSON)
             }
         })
-        document.getElementById("status").innerHTML = "<STORED TO SERVER>";
+        document.getElementById("status").innerHTML = "< " + "STORED TO SERVER" + " >";
     }
 }
 
@@ -28,7 +28,7 @@ function loadJSON(){
         contactArray = json;
         reloadCards();
     });
-    document.getElementById("status").innerHTML = "<LOADED FROM SERVER>"
+    document.getElementById("status").innerHTML = "< " + "LOADED FROM SERVER" + " >";
 }
 
 function loadIndex() {
