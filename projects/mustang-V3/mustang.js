@@ -24,7 +24,6 @@ function storeJSON() {
 
 function loadJSON(){
     $.getJSON("contact_data.json", function(json) {
-        console.log(json); 
         contactArray = json;
         reloadCards();
     });

@@ -3,10 +3,11 @@
 <!--
     Author:  John Laschober
     Class:   Web & Distributed Programming 
-    Project: Mustang v2
+    Project: Mustang v3
 -->
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Mustang v3</title>
         <link rel="stylesheet" href="mustang.css">
         <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
@@ -18,8 +19,8 @@
          <script type="text/javascript" src="mustang.js"></script>
     </head>
     <body onload="initApplication()">  
-        <button class="btn btn-primary" onclick="storeJSON()">Save to Server</button>
-        <button class="btn btn-primary" onclick="loadJSON()">Load from Server</button>
+        <button class="btn btn-primary" id="storeJSON" onclick="storeJSON()">Save to Server</button>
+        <button class="btn btn-primary" id="loadJSON" onclick="loadJSON()">Load from Server</button>
 
         <div class="container" id="mainContainer">
             <div class="row">
@@ -28,7 +29,7 @@
             </div>
 
             <div class="button-holder">
-                    <button class="btn btn-primary" onclick="loadContacts()" id="loadButton">Load Contacts</button>
+                    <button class="btn btn-primary" onclick="loadContacts()" id="loadButton">Load Contacts from Class Index</button>
             </div>
                 
             <div class="row" id="insertingRow"></div>

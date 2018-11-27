@@ -29,7 +29,7 @@ body {
     border: 1px solid white;
 }
 
-#loadButton {
+#loadButton, #loadJSON, #storeJSON {
     background-color: rgb(119, 7, 129) !important;
     color: white !important;
     border-color: white !important;
