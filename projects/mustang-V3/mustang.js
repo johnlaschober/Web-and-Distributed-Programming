@@ -46,6 +46,7 @@ function loadIndex() {
 }
 
 function loadContacts() {
+    deleteAllCards();
     var loadButton = document.getElementById("loadButton");
     loadButton.parentNode.removeChild(loadButton);
 
