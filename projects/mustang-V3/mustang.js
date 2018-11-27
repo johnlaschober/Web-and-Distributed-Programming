@@ -26,6 +26,7 @@ function storeJSON() {
 function loadJSON(){
     $.getJSON("contact_data.json", function(json) {
         contactArray = json;
+        deleteAllCards();
         reloadCards();
     });
     document.getElementById("status").innerHTML = "< " + "LOADED FROM SERVER" + " >";
