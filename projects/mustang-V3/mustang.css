@@ -1,0 +1,46 @@
+.card, .modal-body, .modal-title {
+    text-align: center;
+    color: white;
+}
+
+.close {
+    color: white !important;
+    opacity: 1 !important;
+}
+
+.modal-header {
+    background-color: rgb(82, 5, 88);
+}
+
+.card-body, .modal-body {
+    background-color: rgb(119, 7, 129);
+}
+
+body {
+    background-color: black !important;
+}
+
+.button-holder {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.modal-dialog {
+    border: 1px solid white;
+}
+
+#loadButton {
+    background-color: rgb(119, 7, 129) !important;
+    color: white !important;
+    border-color: white !important;
+}
+
+input {
+    color: black;
+    padding-bottom: 2px;
+    width: 101%;
+}
+
+.ui-front {
+    z-index: 2147483647 !important;
+}

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author:  John Laschober
+    Class:   Web & Distributed Programming 
+    Project: Mustang v2
+-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Mustang v3</title>
+        <link rel="stylesheet" href="mustang.css">
+        <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+         <script type="text/javascript" src="mustang.js"></script>
+    </head>
+    <body onload="initApplication()">  
+        <button class="btn btn-primary" onclick="storeJSON()">Save to Server</button>
+        <button class="btn btn-primary" onclick="loadJSON()">Load from Server</button>
+
+        <div class="container" id="mainContainer">
+            <div class="row">
+                <div class="col-12 text-center" style="color:white" id="status">
+                </div>
+            </div>
+
+            <div class="button-holder">
+                    <button class="btn btn-primary" onclick="loadContacts()" id="loadButton">Load Contacts</button>
+            </div>
+                
+            <div class="row" id="insertingRow"></div>
+        </div>
+
+        <div class="modal fade" id="the-one-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="col-1"></div>
+                        <h5 class="col-10 modal-title text-center" id="info-modal-header"></h5>
+                        <button type="button" class="close col-1" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-left">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="info-first-name">First Name:</label><br>
+                                <label for="info-last-name">Last Name:</label><br>
+                                <label for="info-preferred-name">Preferred Name:</label><br>
+                                <label for="info-phone-number">Phone Number:</label><br>
+                                <label for="info-email">Email:</label><br>
+                                <label for="info-city">City:</label><br>
+                                <label for="info-state">State:</label><br>
+                                <label for="info-zip">Zip:</label><br>
+                                <label for="info-lat">Lat:</label><br>
+                                <label for="info-lng">Lng:</label><br>
+                            </div>
+                            <div class="col-6">
+                                <input id="info-first-name" type="text"><br>
+                                <input id="info-last-name" type="text"><br>
+                                <input id="info-preferred-name" type="text"><br>
+                                <input id="info-phone-number" type="text"><br>
+                                <input id="info-email" type="text"><br>
+                                <input id="info-city" type="text"><br>
+                                <input id="info-state" type="text"><br>
+                                <input id="info-zip" type="text"><br>
+                                <input id="info-lat" type="text"><br>
+                                <input id="info-lng" type="text"><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary" type="button" onclick="saveChanges()">Save</button>
+                                <button class="btn btn-danger" type="button" onclick="deleteCard()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="second-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="col-1"></div>
+                        <button type="button" class="close col-1" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-left">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="new-first-name">First Name:</label><br>
+                                <label for="new-last-name">Last Name:</label><br>
+                                <label for="new-preferred-name">Preferred Name:</label><br>
+                                <label for="new-phone-number">Phone Number:</label><br>
+                                <label for="new-email">Email:</label><br>
+                                <label for="new-city">City:</label><br>
+                                <label for="new-state">State:</label><br>
+                                <label for="new-zip">Zip:</label><br>
+                                <label for="new-lat">Lat:</label><br>
+                                <label for="new-lng">Lng:</label><br>
+                            </div>
+                            <div class="col-6">
+                                <input id="new-first-name" type="text"><br>
+                                <input id="new-last-name" type="text"><br>
+                                <input id="new-preferred-name" type="text"><br>
+                                <input id="new-email" type="text"><br>
+                                <input id="new-phone-number" type="text"><br>
+                                <input id="new-city" type="text"><br>
+                                <input id="new-state" type="text"><br>
+                                <input id="new-zip" type="text" onblur="zipToCityState()"><br>
+                                <input id="new-lat" type="text"><br>
+                                <input id="new-lng" type="text"><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <button class="btn" type="button" onclick="createCard()">Create</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
